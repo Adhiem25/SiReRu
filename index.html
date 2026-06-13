@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiReRu – Beranda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary:    #1a4fa0;
+      --accent:     #f5a623;
+      --surface:    #f0f4fb;
+      --text-main:  #1c2a3a;
+      --text-muted: #6b7a8d;
+      --radius:     12px;
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--surface); color: var(--text-main); }
+
+    .navbar { background: var(--primary) !important; box-shadow: 0 2px 12px rgba(26,79,160,.25); }
+    .navbar-brand { font-weight: 700; font-size: 1.2rem; color: #fff !important; letter-spacing: .3px; }
+    .navbar-brand span { color: var(--accent); }
+    .nav-link { color: rgba(255,255,255,.85) !important; font-weight: 500; }
+    .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
+    .navbar-toggler { border-color: rgba(255,255,255,.4); }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    #hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #2563c7 100%);
+      padding: 90px 0 70px;
+      color: #fff;
+    }
+    #hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.25; }
+    #hero p  { font-size: 1.05rem; opacity: .88; max-width: 520px; }
+    .badge-kampus {
+      display: inline-block; background: var(--accent); color: #fff;
+      font-size: .75rem; font-weight: 600; padding: 4px 12px;
+      border-radius: 50px; letter-spacing: .5px; margin-bottom: 16px;
+    }
+    .hero-cta {
+      background: var(--accent); border: none; color: #fff;
+      font-weight: 700; padding: 12px 28px; border-radius: var(--radius);
+      transition: opacity .2s; text-decoration: none; display: inline-block;
+    }
+    .hero-cta:hover { opacity: .88; color: #fff; }
+    .hero-cta-outline {
+      border: 2px solid rgba(255,255,255,.6); color: #fff;
+      font-weight: 600; padding: 11px 24px; border-radius: var(--radius);
+      transition: background .2s; text-decoration: none; display: inline-block;
+    }
+    .hero-cta-outline:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+    .sec-title { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    .sec-divider { width: 48px; height: 4px; background: var(--accent); border-radius: 4px; margin: 8px 0 24px; }
+
+    .room-card {
+      border: none; border-radius: var(--radius);
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
+      transition: transform .22s, box-shadow .22s; overflow: hidden;
+    }
+    .room-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,.12); }
+    .room-img {
+      height: 170px; object-fit: cover; width: 100%;
+      background: linear-gradient(135deg, #c7d9f8, #a8c0f0);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; color: var(--primary);
+    }
+    .badge-kapasitas { background: var(--primary); color: #fff; font-size: .72rem; font-weight: 600; padding: 3px 10px; border-radius: 50px; }
+    .badge-tersedia { background: #22c55e !important; }
+    .badge-penuh    { background: #ef4444 !important; }
+
+    .fitur-card {
+      background: #fff; border: none; border-radius: var(--radius);
+      box-shadow: 0 2px 14px rgba(0,0,0,.07); padding: 28px 24px; text-align: center;
+    }
+    .fitur-icon {
+      width: 56px; height: 56px; background: var(--surface); border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; color: var(--primary); margin: 0 auto 16px;
+    }
+
+    #cta { background: linear-gradient(135deg, var(--primary) 0%, #2563c7 100%); color: #fff; padding: 60px 0; }
+
+    footer { background: var(--primary); color: rgba(255,255,255,.75); padding: 28px 0; font-size: .875rem; text-align: center; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-building-check me-2"></i>Si<span>ReRu</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="reservasi.html">Reservasi</a></li>
+        <li class="nav-item"><a class="nav-link" href="riwayat.html">Riwayat</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <div class="badge-kampus"><i class="bi bi-geo-alt me-1"></i>Universitas Lambung Mangkurat</div>
+        <h1>Reservasi Ruang Rapat<br>Kampus Secara Digital</h1>
+        <p class="mt-3">Pesan ruang rapat kampus kapan saja, di mana saja — tanpa antri, tanpa ribet. Cukup isi form dan konfirmasi langsung.</p>
+        <div class="d-flex gap-3 flex-wrap mt-4">
+          <a href="reservasi.html" class="hero-cta">
+            <i class="bi bi-calendar-plus me-2"></i>Buat Reservasi
+          </a>
+          <a href="#ruang" class="hero-cta-outline">
+            <i class="bi bi-grid me-2"></i>Lihat Ruang
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center d-none d-lg-block">
+        <i class="bi bi-calendar2-event" style="font-size:9rem;opacity:.25;color:#fff;"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <p class="sec-title mb-0 text-center">Kenapa Pakai SiReRu?</p>
+    <div class="sec-divider mx-auto"></div>
+    <div class="row g-4 mt-1">
+      <div class="col-sm-6 col-lg-3">
+        <div class="fitur-card">
+          <div class="fitur-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h6 class="fw-bold mb-2">Cepat & Mudah</h6>
+          <p class="small text-muted mb-0">Reservasi selesai dalam hitungan menit, tanpa perlu datang ke TU.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="fitur-card">
+          <div class="fitur-icon"><i class="bi bi-shield-check-fill"></i></div>
+          <h6 class="fw-bold mb-2">Terhindar Double Booking</h6>
+          <p class="small text-muted mb-0">Sistem mencatat semua reservasi sehingga konflik jadwal dapat dihindari.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="fitur-card">
+          <div class="fitur-icon"><i class="bi bi-phone-fill"></i></div>
+          <h6 class="fw-bold mb-2">Responsif</h6>
+          <p class="small text-muted mb-0">Dapat diakses dari HP, tablet, maupun komputer dengan tampilan optimal.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="fitur-card">
+          <div class="fitur-icon"><i class="bi bi-clock-history"></i></div>
+          <h6 class="fw-bold mb-2">Riwayat Tercatat</h6>
+          <p class="small text-muted mb-0">Semua permohonan tersimpan dan dapat dilihat kapan saja di halaman Riwayat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ruang" class="py-5" style="background:#fff;">
+  <div class="container">
+    <p class="sec-title mb-0">Ruang Tersedia</p>
+    <div class="sec-divider"></div>
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card room-card h-100">
+          <div class="room-img"><i class="bi bi-display"></i></div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">Ruang Rapat A</h6>
+            <p class="small text-muted mb-2">Gedung Rektorat Lt. 2</p>
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+              <span class="badge badge-kapasitas">20 Orang</span>
+              <span class="badge badge-kapasitas badge-tersedia">Tersedia</span>
+            </div>
+            <ul class="mt-2 mb-3 ps-3 small text-muted">
+              <li>Proyektor + Layar</li><li>AC &amp; WiFi</li><li>Whiteboard</li>
+            </ul>
+            <a href="reservasi.html" class="btn btn-sm btn-outline-primary w-100">
+              <i class="bi bi-calendar-plus me-1"></i>Reservasi Ruang Ini
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card room-card h-100">
+          <div class="room-img" style="background:linear-gradient(135deg,#fde68a,#fbbf24)">
+            <i class="bi bi-people" style="color:#92400e;"></i>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">Ruang Seminar B</h6>
+            <p class="small text-muted mb-2">Gedung Dekanat Lt. 1</p>
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+              <span class="badge badge-kapasitas">50 Orang</span>
+              <span class="badge badge-kapasitas badge-tersedia">Tersedia</span>
+            </div>
+            <ul class="mt-2 mb-3 ps-3 small text-muted">
+              <li>Sound System</li><li>Podium</li><li>AC &amp; WiFi</li>
+            </ul>
+            <a href="reservasi.html" class="btn btn-sm btn-outline-primary w-100">
+              <i class="bi bi-calendar-plus me-1"></i>Reservasi Ruang Ini
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card room-card h-100">
+          <div class="room-img" style="background:linear-gradient(135deg,#fecaca,#f87171)">
+            <i class="bi bi-camera-video" style="color:#7f1d1d;"></i>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">Studio Video C</h6>
+            <p class="small text-muted mb-2">Gedung TIK Lt. 3</p>
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+              <span class="badge badge-kapasitas">10 Orang</span>
+              <span class="badge badge-kapasitas badge-penuh">Penuh</span>
+            </div>
+            <ul class="mt-2 mb-3 ps-3 small text-muted">
+              <li>Kamera &amp; Lighting</li><li>Green Screen</li><li>Soundproof</li>
+            </ul>
+            <button class="btn btn-sm btn-secondary w-100" disabled>
+              <i class="bi bi-x-circle me-1"></i>Sedang Penuh
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Siap Membuat Reservasi?</h2>
+    <p class="mb-4" style="opacity:.85;">Isi form reservasi sekarang dan dapatkan konfirmasi melalui WhatsApp.</p>
+    <a href="reservasi.html" class="hero-cta me-3">
+      <i class="bi bi-calendar-plus me-2"></i>Buat Reservasi Sekarang
+    </a>
+    <a href="riwayat.html" class="hero-cta-outline">
+      <i class="bi bi-clock-history me-2"></i>Lihat Riwayat
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="mb-1"><i class="bi bi-building-check me-2"></i><strong>SiReRu</strong> – Sistem Reservasi Ruang Kampus</p>
+    <p class="mb-0">Universitas Lambung Mangkurat &nbsp;|&nbsp; Pemrograman Web Paralel 2 &nbsp;|&nbsp; 2025/2026</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('navMenu').classList.remove('show');
+      }
+    });
+  });
+</script>
+</body>
+</html>
